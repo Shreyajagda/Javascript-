@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Question-2 </title>
+</head>
+<body>
+    
+    <h1> Enter the Length value </h1>
+    <input type="text" id="input1">
+
+    <h1> Enter the Width value </h1>
+    <input type="text" id="input2">
+
+
+    <h1 id="ans"> </h1>
+</body>
+</html>
+
+<script>
+
+let l = document.getElementById("input1").value
+let w = document.getElementById("input2").value
+
+let r = 2 * (+l+ +w);
+document.getElementById("ans").innerHTML =  "POR" + " " + r ;
+
+</script>
