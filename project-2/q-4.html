@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Question-1 </title>
+</head>
+<body>
+    <h1> Enter the principle value </h1>
+    <input type="text" id="input1">
+
+    <h1> Enter the Rate </h1>
+    <input type="text" id="input2">
+
+    <h1> Enter the Time </h1>
+    <input type="text" id="input3">
+
+    <h1 id="ans"> </h1>
+</body>
+</html>
+
+<script>
+
+let p = document.getElementById("input1").value
+let r = document.getElementById("input2").value
+let t = document.getElementById("input3").value
+
+let si= p * r * t / 100;
+document.getElementById("ans").innerHTML =  si ;
+
+
+</script>
