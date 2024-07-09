@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Question-4 </title>
+</head>
+
+<body>
+    <h1> Enter the Year </h1>
+    <input type="text" id="input1">
+    <h3 id="ans_1"></h3>
+</body>
+
+</html>
+
+<script>
+    let year = document.getElementById("input1").value
+    if (year % 4 === 0) {
+        document.getElementById("ans_1").innerHTML = " This is a Leap Year"
+    } else {
+        document.getElementById("ans_1").innerHTML = "This is't a leap year"
+    }
+</script>

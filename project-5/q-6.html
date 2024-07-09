@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Question-6 </title>
+</head>
+<body>
+
+    <h1>Enter a Marks</h1>
+    <input type="text" id="num">
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let num = document.getElementById("num").value
+
+    if ( num > 90 && num <= 100){
+        document.getElementById("ans").innerHTML = " Excellent "
+    }else if ( num > 70 && num <= 89) {
+        document.getElementById("ans").innerHTML = "Good"
+    } else if (num > 50 && num <= 69){
+        document.getElementById("ans").innerHTML = "fair"
+    }else if (num > 0 && num <= 49){
+        document.getElementById("ans").innerHTML = "Poor"
+    }
+
+</script>
