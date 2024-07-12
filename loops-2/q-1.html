@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Question-1 </title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    for(let row = 1 ; row <= 100 ; row++){
+       
+        if(row % 3 == 0 && row % 5 == 0){
+            document.write(row+"FizzBuzz"+"<br>");
+        }else if(row % 3 == 0){
+            document.write(row+"Fizz"+"</br>");
+        }else if(row % 5 == 0){
+            document.write(row+"Buzz"+"<br>");
+        }else{
+            document.write(`<p>${row}</p>`);
+        }
+        
+    }
+</script>
