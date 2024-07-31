@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Map,Filter,Reduce </title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+const arr = [1,2,3,4,5,6,7,8,9,10];
+const mappedArr = arr.map(()=>{
+    return{
+        addition: num + 2,
+        subtraction: num - 2 ,
+        multiplication: num * 2,
+        division: num / 2,
+        per: num % 100,
+    };
+});
+
+console.log(mappedArr);
+const evennumbers = arr.filter((num) => num % 2 == 0);
+console.log(evennumbers);
+
+const oddnumbers = arr.filter((num) => num % 2 !== 0 );
+console.log(oddnumbers);
+
+arr.forEach((num) => console.log(num));
+
+</script>
+
