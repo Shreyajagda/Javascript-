@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Question-2 </title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    function calculateDiscount(amount) {
+    if (amount >= 100) {
+        return 20;  
+    } else if (amount >= 50) {
+        return 10; 
+    } else {
+        return 0;   
+    }
+}
+const purchaseAmount = 75; 
+const discount = calculateDiscount(purchaseAmount);
+console.log(`The discount for a purchase amount of $${purchaseAmount} is $${discount}.`);
+</script>

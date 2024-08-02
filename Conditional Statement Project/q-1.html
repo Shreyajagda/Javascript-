@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Question-1 </title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function getTicketPrice(age) {
+    if (age < 12) {
+        return 5;
+    } else if (age < 18) {
+        return 10;
+    } else if (age < 60) {
+        return 20;
+    } else {
+        return 15;
+    }
+}
+const age = 25; 
+const ticketPrice = getTicketPrice(age);
+
+console.log(`The ticket price for age ${age} is $${ticketPrice}.`);
+
+</script>
