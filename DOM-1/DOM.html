@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM-1 </title>
+</head> 
+<body>
+    
+<h1 id="h"> Do one thing every day that scares you </h1>
+<button id="btn-1"> Turn into red </button>
+    
+
+<h3 id="h3"> Well done is better than well said </h3>
+<h3 id="h3"> Well done is better than well said </h3>
+<h3 id="h3"> Well done is better than well said </h3>
+<button id="btn-2"> Turn into green </button>
+
+
+<h5>Life itself is the most wonderful fairy tale</h5>
+<h5>Life itself is the most wonderful fairy tale</h5>
+<h5>Life itself is the most wonderful fairy tale</h5>
+<button id="btn-3"> Turn into Blue </button>
+
+
+<p class="p1"> Shreya Soni </p>
+<button id="btn-4">Change Green</button>
+
+<p class="p2"> Shreya Soni </p>
+<button id="btn-5">Change Blue</button>
+
+<p class="p3"> Shreya Soni </p>
+<button id="btn-6">Change Red</button>
+</body>
+</html>
+
+<script>
+
+
+
+    let btn = document.getElementById("btn-1")
+    btn.addEventListener("click",function(){
+       document.getElementById('h').style.color= 'red';
+    })
+
+    let s = document.getElementById("btn-2")
+    s.addEventListener("click",function(){
+        let s = document.getElementsByTagName('h3');
+        for (let i = 0; i < s.length; i++){
+            s[i].style.color= 'green';
+        }
+    })
+
+
+    let n = document.getElementById("btn-3")
+    n.addEventListener("click",function(){
+        let n = document.getElementsByTagName('h5');
+        for (let i = 0; i < n.length; i++){
+            n[i].style.color= 'blue';
+        }
+    })
+
+    let green = document.getElementById("btn-4")
+    green.addEventListener("click",function(){
+        let green = document.getElementsByClassName('p1');
+        for (let i = 0; i < green.length; i++){
+            green[i].style.color= 'green';
+        }
+    })
+
+
+    let blue = document.getElementById("btn-5")
+    blue.addEventListener("click",function(){
+        let blue = document.getElementsByClassName('p2');
+        for (let i = 0; i < blue.length; i++){
+            blue[i].style.color= 'blue';
+        }
+    })
+
+    
+    let red = document.getElementById("btn-6")
+    red.addEventListener("click",function(){
+        let red = document.getElementsByClassName('p3');
+        for (let i = 0; i < red.length; i++){
+            red[i].style.color= 'red';
+        }
+    })
+
+
+
+
+
+
+    
+
+</script>
