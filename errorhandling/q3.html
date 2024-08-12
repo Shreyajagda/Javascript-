@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function logVariableValue(variableName) {
+    try {
+        console.log(eval(variableName));
+    } catch (e) {
+        console.error(Error accessing variable '${variableName}': ${e.name} - ${e.message});
+    }
+}
+
+let age = 25;
+let name = "Alice";
+
+logVariableValue("age"); 
+logVariableValue("name"); 
+logVariableValue("mark");
+</script>
