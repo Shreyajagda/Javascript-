@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> OOP </title>
+</head>
+<body>
+    
+
+
+</body>
+</html>
+
+<script>
+    // Polymorphism 
+    // console.log("Polymorphism");
+    
+    class Human {
+        p1(){
+            console.log("Hello, My name is shreya")
+        }
+    }
+    class Human1 extends Human {
+       p2(){
+        console.log("I am currently a student")
+       }
+        
+    }
+
+    class Human2 extends Human1 {
+        p3(){
+            console.log("And Doing fullstack development course");
+            
+        }
+    }
+
+    let obj = new Human();
+    let obj1 = new Human1();
+    let obj2 = new Human2();
+
+    obj.p1();   
+    obj1.p2();    
+    obj2.p3();    
+
+    console.log(" ");
+    // console.log(" Inheritance - Simple Inheritance  ");
+
+    //Inheritance - Simple Inheritance 
+
+    class Animal {
+        speaks (){
+            console.log("Animal speaks")
+        }
+        greet(){
+        console.log("Hello Dog");
+    
+    }
+    }
+    class dog extends Animal {
+        speaks(){
+            console.log("Dog Barks");
+            
+        }
+    }
+   let ob = new dog();
+   ob.greet();
+   ob.speaks();
+
+   console.log(" ");
+
+    //Multilevel Inheritance 
+    class Person{
+        treat(){
+            console.log("Hello Person");
+            
+        }
+    }
+    class Person1 extends Person{
+        shreya(){
+            console.log("Hello Person1");
+            
+        }
+    }
+    class Person2 extends Person1{
+        greet(){
+            console.log("Hello Person2");
+            
+        }
+    }
+
+    let o = new Person2();
+    o.treat();
+    o.shreya();
+    o.greet();
+
+
+    console.log(" ");
+    
+
+    // //Heirarchical Inheritance 
+    class Personn {
+        treat(){
+            console.log("Hello Everyone");
+            
+        }
+    }
+    class Personn1 extends Personn{
+        shreya(){
+            console.log("Hello Everyone from person1");
+            
+        }
+    }
+    class Personn2 extends Personn1{
+        greet(){
+            console.log("Hello Everyone from Person2");
+            
+        }
+    }
+
+    let b = new Personn2();
+    b.treat();
+    b.shreya();
+    b.greet();
+
+    //Abstraction 
+
+    console.log(" ");
+    // default Constructor
+    class Cars{
+        constructor(){
+            this.name = "Mustang GT"
+            this.company = "Ford"
+        }
+    }
+
+    let objj =  new Cars ();
+    console.log(objj.name);
+    console.log(objj.company);
+
+        console.log(" ");
+
+    // Paramiterized Constructor
+
+    class Course {
+        constructor(CourseName, Duration){
+            this.CourseName = CourseName
+            this.Duration = Duration
+        }
+
+        info (){
+            return console.log(`I am currently doing ${this.CourseName} and duration is ${this.Duration}`)
+        }
+    } 
+
+    let c1 = new Course("Fullstack Development Course","15 Months");
+
+c1.info();
+
+console.log(" ");
+
+// copy constructor 
+
+class Com {
+    constructor(name,age){
+        this.name
+        this.age
+
+    }
+
+    copy(){
+        return new Com(this.name,this.age);
+
+    }
+}
+
+class game{
+    constructor(name,mode){
+        this.name = name
+        this.mode = mode
+    }
+    copy(){
+        return new game(this.name,this.mode)
+    }
+}
+let game1 = new game("mortar combet"," PvP");
+let game2 = game1.copy();
+
+
+console.log(game1.name);
+console.log(game1.mode);
+console.log(game2.name);
+console.log(game2.mode);
+
+    console.log(" ");
+
+// Conditional Statement
+
+class Humann {
+    constructor(name,age){
+        this.name= name || "Guest"
+        this.age = age >=0 ? age : "Invalid" 
+    }
+}
+
+let human= new Humann("Shreya","18");
+console.log(human.name);
+console.log(human.age);
+
+let human1 = new Humann();
+console.log(human1.name);
+console.log(human1.age);
+
+
+
+    
+
+
+
+
+</script>
