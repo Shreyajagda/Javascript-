@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#stop{
+    background:rgb(43,67,96);
+    color: pink;
+}
+#start{
+    background:rgb(43,67,96);
+    color: pink;
+
+}
+#reset{
+    background:rgb(43,67,96);
+    color: pink;
+}
+
+#container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx-elHC2Leao1h2sU7eU07ZDWHxi_ocGvipw&s);
+}
+
+#screen{
+    width: 300px;
+    height: 300px;
+    background: var(--card-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: pink;
+    background-image: url(https://t4.ftcdn.net/jpg/04/49/27/09/360_F_449270967_GF17is5zGXIFD05rP6jBNYyko3NYzoeo.jpg);
+}
+
+button{
+    width: 80px;
+    height: 80px;
+    background: var(--card-color);
+    border: none;
+    border-radius: 50%;
+    color: var(--font-color);
+    font-size: 25px;
+    cursor: pointer;
+    margin-inline: 10px;
+}   
+</style>
+
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <div id="container">
+        <div id="screen"x>00:00:00</div>
+        <div id="controls">
+            <button id="stop"> Pause </button>
+            <button id="start"> Start </button>
+            <button id="reset"> Reset </button>
+        </div>
+    </div>
+</body>
+
+<script src="./script.js"></script>
+
+</html>
+<script>
+    let start = document.getElementById('start');
+let stop = document.getElementById('stop');
+let reset = document.getElementById('reset');
+let screen = document.getElementById('screen');
+
+let seconds = 0;
+let minutes = 0;
+let milliseconds = 0;
+let timer = null;
+
+start.addEventListener('click', () => {
+    if (!timer) {
+        timer = setInterval(() => {
+            milliseconds++;
+            if (milliseconds >= 100) {
+                seconds++;
+                milliseconds = 0;
+            }
+            if (seconds >= 60) {
+                minutes++;
+                seconds = 0;
+            }
+            screen.innerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}:${String(milliseconds).padStart(2, '0')}`;
+        }, 10);
+    }
+});
+
+stop.addEventListener('click', () => {
+    clearInterval(timer);
+    timer = null;  
+});
+
+reset.addEventListener('click', () => {
+    clearInterval(timer);
+    timer = null;  
+    seconds = 0;
+    minutes = 0;
+    milliseconds = 0;
+    screen.innerText = '00:00:00';
+});
+</script>
