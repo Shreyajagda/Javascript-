@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+         Weather API 
+    </title>
+
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#showData{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    padding: 50px;
+}
+.card{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding-block: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.image{
+    height: 150px;
+    width: 150px;
+    background: white;
+   
+}
+    </style>
+</head>
+<body>
+    <div id="showData"></div>
+</body>
+</html>
+
+<script>
+
+let showData = document.getElementById('showData');
+let getData = async () => {
+    let APIData = await fetch("https://fakestoreapi.com/products");
+    let data = await APIData.json();
+    console.log(data);
+    await data.forEach(object => {
+        let newDiv = document.createElement("div");
+        console.log(object.image)
+        newDiv.innerHTML = `
+            <div class="card">
+                <div><img class="image" src=${object.image} /></div>
+
+                <div><b>Title : </b>${object.title}</div>
+                <div><b>Price : </b>${object.price}</div>
+                <div><b>Count: </b>${object.count}</div>   
+                <div><b>Description: </b>${object.description}</div>  
+            </div>
+        `;
+    
+        showData.appendChild(newDiv);
+    });
+};
+getData();
+</script>
